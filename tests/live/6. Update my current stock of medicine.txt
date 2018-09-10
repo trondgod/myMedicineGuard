@@ -1,0 +1,16 @@
+TODO
+Feature: Update my current stock of medicine
+
+ In order to later be noticed to renew a medicine in time
+ As a person
+ I want medicine I take to be registered as taken to continious monitor how much medicine is left in stock
+
+@myTag
+Scenario: Register medicine is taken
+       Given I get reminder to take medicine X
+       And medicine dose is 1 tablet   
+       And Y tablets are left in storage    
+       When I register I took the scheduled medicine
+       Then my medicine storage for X is now Y - 1 
+
+Scenario: Reminder medicine storage is nearly empty

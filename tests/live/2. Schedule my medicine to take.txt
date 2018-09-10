@@ -1,0 +1,18 @@
+Feature: Schedule my medicine to take
+
+ In order to be able to get reminder when to take a medicine scheduled by a doctor
+ As a person
+ I want to register the schedule of the medicine 
+
+@myTag
+Scenario: Schedule new medicine
+       Given I have to take medicine X
+       And medicine dose is 1 tablet
+       And medicine X is scheduled to be taken each day at 10:00
+       And total tablets are Y
+       When I register the medicine schedule
+       Then my medicine schedules are X each day at 10:00 with a quantity of Y
+
+Scenario: Change schedule of a medicine
+
+Scenario: "Delete" schedule of a medicine (inactive)

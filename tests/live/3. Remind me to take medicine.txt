@@ -1,0 +1,22 @@
+Feature: Remind me to take medicine
+
+ In order to rember to take medicine scheduled by a doctor
+ As a person
+ I want a reminder to tell me to take the medicine on time
+
+@myTag
+Scenario: Reminder for one medicine each day
+       Given I have medicine X
+       And medicine dose is 1 tablet
+       And medicine X is scheduled to be taken each day at 10:00
+       When time is 10:00
+       Then reminding is done for medicine X with dose 1 tablet
+
+Scenario: Reminder for one medicine several times for day and each day
+       Given I have medicine X
+       And medicine dose is 1 tablet
+       And medicine X is scheduled to be taken each day at 10:00  and 22:00
+       When time is 10:00
+       Then reminding is done for medicine X with dose 1 tablet
+       When time is 22:00 
+       Then reminding is done for medicine X with dose 1 tablet

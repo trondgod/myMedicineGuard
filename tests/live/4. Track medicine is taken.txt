@@ -1,0 +1,15 @@
+Feature: Track medicine is taken
+
+ In order to be noticed to renew a medicine
+ As a person
+ I want to register medicine taken to monitor how much medicine probably is left
+
+@myTag
+Scenario: Register medicine is taken
+       Given I got a reminder to take medicine X
+       And medicine dose is 1 tablet   
+       And Y tablets are left in storage    
+       When I register I took scheduled medicine
+       Then my medicine storage for X is Y - 1 
+
+Scenario: Reminder medicine storage is nearly empty

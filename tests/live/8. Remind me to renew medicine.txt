@@ -1,0 +1,16 @@
+Feature: Remind me to renew medicine
+
+ In order to be noticed to renew a medicine
+ As a person
+ I want to register medicine items prescripted by doctor 
+
+TODO
+@myTag
+Scenario: Register medicines prescripted
+       Given medicine X, Y prescripted by doctor
+       And 1 items for medicine X 
+       And 2 items for medicine Y 
+       When I register medicine items
+       Then my medicine 
+
+Scenario: Reminder a medicine prescripttions is nearly empty
