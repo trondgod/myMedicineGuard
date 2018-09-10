@@ -1,0 +1,12 @@
+
+Feature: Search for a medicine
+
+ In order to register my medicines
+ As a person
+ I want to be able to search for medicines in the national or some other public medicine register
+
+@myTag
+Scenario: Search for a medicine that should exist
+       Given I have search for medicine X       
+       When search engine is finish
+       Then medicine X is available 
